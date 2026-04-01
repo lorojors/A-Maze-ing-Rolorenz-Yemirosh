@@ -1,0 +1,26 @@
+# A-Maze-ing configuration file
+# --------------------------------
+# All KEY=VALUE pairs; lines starting with # are ignored.
+#
+# Mandatory keys:
+#   WIDTH        - maze width in cells (integer >= 2)
+#   HEIGHT       - maze height in cells (integer >= 2)
+#   ENTRY        - entry cell as x,y (0-based, inside bounds)
+#   EXIT         - exit cell  as x,y (0-based, inside bounds, != ENTRY)
+#   OUTPUT_FILE  - path to the output hex file
+#   PERFECT      - True/False; True = exactly one path between any two cells
+#
+# Optional keys:
+#   SEED         - integer seed for reproducibility (omit for random)
+#   ALGORITHM    - recursive_backtracker (default) | prim
+#   ANIMATE      - True/False; show generation animation in terminal
+
+WIDTH=60
+HEIGHT=20
+ENTRY=0,0
+EXIT=40,14
+OUTPUT_FILE=maze.txt
+PERFECT=False
+# SEED=42
+# ALGORITHM=recursive_backtracker
+# ANIMATE=False

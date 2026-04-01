@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "mazegen-42"
+version = "1.0.0"
+description = "Reusable maze generation module — recursive backtracker & Prim algorithms."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["maze", "generator", "algorithm", "recursive-backtracker", "prim"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+[project.urls]
+Repository = "https://github.com/yourusername/a-maze-ing"
+
+[tool.setuptools.packages.find]
+include = ["mazegen*"]
+
+[tool.setuptools.py-modules]
+modules = ["mazegen"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.flake8]
+max-line-length = 99
+exclude = [".mypy_cache", "__pycache__", "dist", "build", "*.egg-info"]
